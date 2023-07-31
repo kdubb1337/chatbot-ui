@@ -1,0 +1,15 @@
+{
+  "keepExistingTerminalsOpen": false,
+  "runOnStartup": true,
+  "terminals": [
+    {
+      "splitTerminals": [
+        {
+          "name": "Turbo Dev",
+          "commands": ["p dev"],
+          "color": "red"
+        }
+      ]
+    }
+  ]
+}
