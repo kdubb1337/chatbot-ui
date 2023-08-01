@@ -6,7 +6,7 @@ COPY package*.json ./
 # ---- Dependencies ----
 FROM base AS dependencies
 RUN npm install -g pnpm
-RUN pnpm install --frozen-lockfile
+RUN pnpm install --production
 
 # ---- Build ----
 FROM dependencies AS build
