@@ -5,12 +5,13 @@ COPY package*.json ./
 
 # ---- Dependencies ----
 FROM base AS dependencies
-RUN npm ci
+RUN npm install -g pnpm
+RUN pnpm install --frozen-lockfile
 
 # ---- Build ----
 FROM dependencies AS build
 COPY . .
-RUN npm run build
+RUN pnpm run build
 
 # ---- Production ----
 FROM node:19-alpine AS production
